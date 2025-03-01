@@ -484,6 +484,112 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        .testimonials {
+    padding: 80px 0;
+    background-color: white;
+}
+
+.testimonials-slider {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.testimonial-card {
+    background-color: var(--light);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px var(--shadow);
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px var(--shadow);
+}
+
+.testimonial-content {
+    flex-grow: 1;
+    margin-bottom: 20px;
+}
+
+.testimonial-content p {
+    font-style: italic;
+    color: var(--text);
+    line-height: 1.7;
+    position: relative;
+}
+
+.testimonial-content p::before {
+    content: '"';
+    font-size: 3rem;
+    color: var(--accent);
+    position: absolute;
+    top: -20px;
+    left: -15px;
+    opacity: 0.5;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+}
+
+.author-image {
+    width: a0px;
+    height: a0px;
+    border-radius: 50%;
+    margin-right: 15px;
+    overflow: hidden;
+}
+
+.author-placeholder {
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.author-info h4 {
+    margin: 0;
+    color: var(--primary);
+    font-size: 1.1rem;
+}
+
+.author-info p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: var(--dark);
+    opacity: 0.8;
+}
+
+.rating {
+    color: #FFD700;
+    letter-spacing: 2px;
+}
+
+.testimonial-footer {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .testimonials-slider {
+        grid-template-columns: 1fr;
+    }
+}
+
+
     </style>
 </head>
 <body>
@@ -491,7 +597,7 @@
     <header>
         <div class="container nav-container">
             <div class="logo">
-                <img src="/api/placeholder/50/50" alt="Logo Debora Haupenthal Psicologia">
+                <img src="./img/logo.svg" alt="Logo Debora Haupenthal Psicologia">
                 <div class="logo-text">Debora Haupenthal | Psicologia</div>
             </div>
             <button class="hamburger">☰</button>
@@ -509,7 +615,7 @@
     <section class="hero">
         <div class="container hero-content">
             <h1>Psicologia e Neuropsicologia baseadas em evidências</h1>
-            <p>Transforme sua saúde mental com atendimento humanizado e profissional, presencial em Curitiba ou online.</p>
+            <p>Transforme sua saúde mental com atendimento humanizado e profissional, presencial ou online.</p>
             <a href="#contato" class="btn">Agende sua consulta</a>
         </div>
     </section>
@@ -522,11 +628,11 @@
             </div>
             <div class="profile-text">
                 <h2>Debora Haupenthal</h2>
-                <h3>Psicólogo e Neuropsicólogo (CRP-PR: 07/06890)</h3>
-                <p>Sou <strong>psicólogo</strong> com mais de <strong>7 anos de experiência</strong> em psicoterapia (cognitivo-comportamental) e <strong>avaliações neuropsicológicas</strong>, atendendo adultos a partir de 18 anos, online e presencialmente em Curitiba-PR.</p>
-                <p>Sou especialista em <strong>Psicologia Clínica</strong> (PUC-RS) e <strong>Neuropsicologia</strong> (Albert Einstein-SP), com extensão em <strong>Psicofarmacologia Clínica</strong> (USP) e participação em pesquisa em <strong>Neuropsicologia</strong> (UNIFESP).</p>
-                <p>Com mais de <strong>12 anos em Gestão de Pessoas</strong>, integro minhas experiências para oferecer um atendimento humano e baseado em <strong>evidências</strong>.</p>
-                <a href="https://www.google.com/maps/place/Andr%C3%A9+Caz%C3%A9+Psicologia+e+Neuropsicologia/@-25.5285966,-49.2212749,11z/data=!4m8!3m7!1s0x94ce59fac62d3ac7:0x122afb91be9e9df0!8m2!3d-25.5285966!4d-49.2212749!9m1!1b1!16s%2Fg%2F11lg1r_j6m?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn">Ver avaliações no Google</a>
+                <h3>Psicóloga e Neuropsicóloga (CRP-PR: 07/06890)</h3>
+                <p><strong>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit. Phasellus nec iaculis mauris. <strong>Curabitur nec risus at odio luctus suscipit.</strong> Vestibulum tincidunt lacus nec felis tempus, at pharetra turpis pellentesque. Duis gravida nunc vel ipsum facilisis, nec tincidunt est tincidunt.</p>
+                <p><strong>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit. Fusce vel nibh et quam venenatis pretium a nec libero. Sed eget risus bibendum, <strong>volutpat lacus id, laoreet tortor</strong>. Etiam auctor sem a nulla ullamcorper fringilla.</p>
+                <p><strong>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit. Integer auctor ex ac odio tincidunt, a tristique felis malesuada. Nulla <strong>facilisi. Proin consectetur purus</strong>  in lectus egestas, nec dictum nisi pellentesque.</p>
+                <a href="" target="_blank" class="btn">Ver avaliações no Google</a>
             </div>
         </div>
     </section>
@@ -548,15 +654,76 @@
                 <div class="service-card">
                     <div class="service-icon">💬</div>
                     <h3>Psicoterapia</h3>
-                    <p>Processo terapêutico baseado na Terapia Cognitivo-Comportamental (TCC), que visa promover mudanças que melhorem seu bem-estar e equilíbrio emocional.</p>
-                    <p>Trabalho questões como ansiedade, depressão, estresse, traumas, relacionamentos e autoconhecimento.</p>
+                    <p>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit. Integer auctor ex ac odio tincidunt, a tristique felis.</p>
+                    <p>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit. Integer auctor ex ac odio tincidunt, a tristique felis.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">💻</div>
                     <h3>Atendimento Online</h3>
-                    <p>Ofereço atendimento à distância com a mesma qualidade e eficácia do presencial, proporcionando flexibilidade e acessibilidade.</p>
-                    <p>Sessões realizadas por videoconferência em ambiente seguro e confidencial.</p>
+                    <p>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit. Integer auctor ex ac odio tincidunt, a tristique felis.</p>
+                    <p>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit. Integer auctor ex ac odio tincidunt, a tristique felis.</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials" id="depoimentos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Depoimentos</h2>
+                <p>O que meus pacientes dizem sobre o trabalho que desenvolvemos juntos.</p>
+            </div>
+            <div class="testimonials-slider">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"A terapia com a Dra. Debora foi um divisor de águas na minha vida. Depois de meses lidando com ansiedade e dificuldades no trabalho, finalmente consegui desenvolver estratégias eficazes para lidar com meus pensamentos. Sua abordagem é acolhedora e profissional ao mesmo tempo."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <div class="author-placeholder">MR</div>
+                        </div>
+                        <div class="author-info">
+                            <h4>Mariana R.</h4>
+                            <p>Paciente há 1 ano</p>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"A avaliação neuropsicológica realizada pela Dra. Debora foi extremamente detalhada e esclarecedora. Finalmente entendi as dificuldades do meu filho e pudemos buscar os recursos adequados para auxiliá-lo na escola. O relatório foi muito bem aceito pela instituição de ensino e pelos outros profissionais."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <div class="author-placeholder">CP</div>
+                        </div>
+                        <div class="author-info">
+                            <h4>Carlos P.</h4>
+                            <p>Pai de paciente</p>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Mesmo com o atendimento online, consegui estabelecer uma conexão muito boa com a Dra. Debora. Sua capacidade de escuta e suas intervenções são sempre muito pertinentes. Após seis meses de terapia, sinto uma melhora significativa nos meus relacionamentos interpessoais e na minha autoconfiança."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <div class="author-placeholder">JL</div>
+                        </div>
+                        <div class="author-info">
+                            <h4>Juliana L.</h4>
+                            <p>Paciente de terapia online</p>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-footer">
+                <a href="#" class="btn">Ver mais depoimentos</a>
             </div>
         </div>
     </section>
@@ -625,28 +792,31 @@
                     <h3>Informações de Contato</h3>
                     <div class="contact-item">
                         <div class="contact-icon">📍</div>
-                        <div class="contact-text">Av. Presidente Affonso Camargo, 2583 | Jardim Botânico | Curitiba-PR</div>
+                        <div class="contact-text">Av. 
+                            Lorem ipsum dolor sit amet, 2583 | 
+                            Lorem ipsum dolor sit amet | 
+                            Lorem ipsum dolor sit amet-BR</div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">📱</div>
-                        <div class="contact-text">(41) 99100-5480</div>
+                        <div class="contact-text">(99)9999-9999</div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">✉️</div>
-                        <div class="contact-text">caze.psico@gmail.com</div>
+                        <div class="contact-text">Lorem ipsum dolor sit amet@gmail.com</div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">🏢</div>
-                        <div class="contact-text">CNPJ: 39.449.825/0001-23 | CRP-08: PJ-03734</div>
+                        <div class="contact-text">CNPJ: Lorem ipsum dolor sit amet | CRP-Lorem ipsum dolor sit amet: PJ-Lorem ipsum dolor sit amet</div>
                     </div>
                 </div>
                 <div class="contact-info">
                     <h3>Fale Comigo</h3>
                     <div class="contact-buttons">
-                        <a href="https://api.whatsapp.com/send/?phone=5541991005480&text=Ol%C3%A1%2C+vim+pelo+site%21+Gostaria+de+tirar+duvidas.&type=phone_number&app_absent=0" class="btn btn-whatsapp" target="_blank">WhatsApp</a>
-                        <a href="https://www.instagram.com/neuropsicaze/#" class="btn btn-instagram" target="_blank">Instagram</a>
-                        <a href="mailto:caze.psico@gmail.com?subject=Contato%20via%20site&body=Olá,%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços" class="btn btn-email" target="_blank">E-mail</a>
-                        <a href="https://www.google.com/maps/place/Andr%C3%A9+Caz%C3%A9+Psicologia+e+Neuropsicologia/@-25.4407642,-49.2360969,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce59fac62d3ac7:0x122afb91be9e9df0!8m2!3d-25.4407642!4d-49.2360969!16s%2Fg%2F11lg1r_j6m?entry=ttu&g_ep=EgoyMDI1MDIyNC4wIKXMDSoASAFQAw%3D%3D" class="btn btn-location" target="_blank">Ver no mapa</a>
+                        <a href="" class="btn btn-whatsapp" target="_blank">WhatsApp</a>
+                        <a href="" class="btn btn-instagram" target="_blank">Instagram</a>
+                        <a href="" class="btn btn-email" target="_blank">E-mail</a>
+                        <a href="" class="btn btn-location" target="_blank">Ver no mapa</a>
                     </div>
                 </div>
             </div>
@@ -664,8 +834,8 @@
                 <li><a href="#contato">Contato</a></li>
             </ul>
             <div class="footer-social">
-                <a href="https://www.instagram.com/neuropsicaze/#" target="_blank" class="social-icon">📷</a>
-                <a href="https://api.whatsapp.com/send/?phone=5541991005480" target="_blank" class="social-icon">📱</a>
+                <a href="" target="_blank" class="social-icon">📷</a>
+                <a href="" target="_blank" class="social-icon">📱</a>
             </div>
             <div class="copyright">Copyright © 2025 Debora Haupenthal | Todos os direitos reservados</div>
         </div>

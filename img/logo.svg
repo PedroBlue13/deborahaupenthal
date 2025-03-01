@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300">
+  <!-- Background circle -->
+  <circle cx="150" cy="150" r="120" fill="#f8f3fd" />
+  
+  <!-- Outer ring -->
+  <circle cx="150" cy="150" r="110" fill="none" stroke="#7b5b9e" stroke-width="3" />
+  
+  <!-- Decorative elements -->
+  <path d="M150,60 C190,80 190,110 150,130 C110,110 110,80 150,60" fill="#b097cd" />
+  
+  <!-- Stylized brain/heart symbol -->
+  <path d="M150,140 C170,120 200,120 200,150 C200,180 170,190 150,210 C130,190 100,180 100,150 C100,120 130,120 150,140" fill="none" stroke="#7b5b9e" stroke-width="2.5" />
+  
+  <!-- Text for name -->
+  <text x="150" y="235" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#5a4078" font-weight="bold">Debora Haupenthal</text>
+  
+  <!-- Text for profession -->
+  <text x="150" y="255" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#7b5b9e">Psicóloga</text>
+</svg>
