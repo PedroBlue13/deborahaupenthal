@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property="og:title" content="Debora Haupenthal - Psicologia e Neuropsicologia">
+    <meta property="og:description" content="Psicólogo e neuropsicólogo em Curitiba e Atendimento Online. Especialista em Terapia Cognitivo-Comportamental e Avaliações Neuropsicológicas.">
+    <meta property="og:type" content="website">
+    <title>Debora Haupenthal - Neuropsicóloga pelo Hosp. Israelita Albert Einstein - SP</title>
+    <style>
+        /* Paleta de cores tranquilas */
+        :root {
+            --primary: #4A6D8C;
+            --secondary: #81A4CD;
+            --accent: #D1E2F3;
+            --light: #F5F9FF;
+            --dark: #2C3E50;
+            --text: #333333;
+            --shadow: rgba(0, 0, 0, 0.1);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header e navegação */
+        header {
+            background-color: white;
+            box-shadow: 0 2px 15px var(--shadow);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: var(--primary);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('/api/placeholder/1200/500');
+            background-size: cover;
+            background-position: center;
+            padding: 150px 0 80px;
+            text-align: center;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: var(--dark);
+        }
+        
+        /* Perfil */
+        .profile {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .profile-container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .profile-image {
+            flex: 1;
+            text-align: center;
+        }
+        
+        .profile-image img {
+            width: 90%;
+            max-width: 400px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px var(--shadow);
+        }
+        
+        .profile-text {
+            flex: 1;
+        }
+        
+        .profile-text h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 2rem;
+        }
+        
+        .profile-text h3 {
+            font-weight: normal;
+            color: var(--secondary);
+            margin-bottom: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .profile-text p {
+            margin-bottom: 15px;
+        }
+        
+        .profile-text strong {
+            color: var(--dark);
+        }
+        
+        .profile-text .btn {
+            display: inline-block;
+            margin-top: 20px;
+        }
+        
+        /* Serviços */
+        .services {
+            padding: 80px 0;
+            background-color: var(--accent);
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-header h2 {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+        
+        .section-header p {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--dark);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px var(--shadow);
+        }
+        
+        .service-card h3 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+        
+        .service-card p {
+            margin-bottom: 20px;
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 20px;
+        }
+        
+        /* FAQ */
+        .faq {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .accordion {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .accordion-item {
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px var(--shadow);
+        }
+        
+        .accordion-header {
+            background-color: var(--light);
+            padding: 15px 20px;
+            cursor: pointer;
+            position: relative;
+            font-weight: 500;
+            color: var(--primary);
+            transition: background-color 0.3s;
+        }
+        
+        .accordion-header:hover {
+            background-color: var(--accent);
+        }
+        
+        .accordion-content {
+            padding: 0 20px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: white;
+        }
+        
+        .accordion-content-inner {
+            padding: 20px 0;
+        }
+        
+        .accordion-item.active .accordion-content {
+            max-height: 200px;
+        }
+        
+        /* Contato */
+        .contact {
+            padding: 80px 0;
+            background-color: var(--accent);
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        
+        .contact-info {
+            background-color: white;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px var(--shadow);
+        }
+        
+        .contact-info h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+        
+        .contact-text {
+            color: var(--dark);
+        }
+        
+        .contact-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            border-radius: 5px;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s, transform 0.3s;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: var(--dark);
+            transform: translateY(-3px);
+        }
+        
+        .btn-whatsapp {
+            background-color: #25D366;
+        }
+        
+        .btn-instagram {
+            background-color: #E1306C;
+        }
+        
+        .btn-email {
+            background-color: var(--secondary);
+        }
+        
+        .btn-location {
+            background-color: var(--dark);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-logo {
+            margin-bottom: 20px;
+        }
+        
+        .footer-links {
+            display: flex;
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links li {
+            margin: 0 15px;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+        
+        .footer-social {
+            display: flex;
+            margin-bottom: 20px;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 10px;
+            color: white;
+            font-size: 1.2rem;
+            transition: background-color 0.3s;
+        }
+        
+        .social-icon:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .copyright {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background-color: white;
+                flex-direction: column;
+                padding: 20px;
+                box-shadow: 0 5px 15px var(--shadow);
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                margin: 10px 0;
+            }
+            
+            .hamburger {
+                display: block;
+            }
+            
+            .profile-container {
+                flex-direction: column;
+            }
+            
+            .profile-image, .profile-text {
+                width: 100%;
+            }
+            
+            .contact-buttons {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header e Navegação -->
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="/api/placeholder/50/50" alt="Logo Debora Haupenthal Psicologia">
+                <div class="logo-text">Debora Haupenthal | Psicologia</div>
+            </div>
+            <button class="hamburger">☰</button>
+            <ul class="nav-links">
+                <li><a href="#sobre">Sobre mim</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#depoimentos">Depoimentos</a></li>
+                <li><a href="#faq">Dúvidas</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Psicologia e Neuropsicologia baseadas em evidências</h1>
+            <p>Transforme sua saúde mental com atendimento humanizado e profissional, presencial em Curitiba ou online.</p>
+            <a href="#contato" class="btn">Agende sua consulta</a>
+        </div>
+    </section>
+
+    <!-- Perfil -->
+    <section class="profile" id="sobre">
+        <div class="container profile-container">
+            <div class="profile-image">
+                <img src="./img/perfil.jpg" alt="Foto do Psicólogo Debora Haupenthal">
+            </div>
+            <div class="profile-text">
+                <h2>Debora Haupenthal</h2>
+                <h3>Psicólogo e Neuropsicólogo (CRP-PR: 07/06890)</h3>
+                <p>Sou <strong>psicólogo</strong> com mais de <strong>7 anos de experiência</strong> em psicoterapia (cognitivo-comportamental) e <strong>avaliações neuropsicológicas</strong>, atendendo adultos a partir de 18 anos, online e presencialmente em Curitiba-PR.</p>
+                <p>Sou especialista em <strong>Psicologia Clínica</strong> (PUC-RS) e <strong>Neuropsicologia</strong> (Albert Einstein-SP), com extensão em <strong>Psicofarmacologia Clínica</strong> (USP) e participação em pesquisa em <strong>Neuropsicologia</strong> (UNIFESP).</p>
+                <p>Com mais de <strong>12 anos em Gestão de Pessoas</strong>, integro minhas experiências para oferecer um atendimento humano e baseado em <strong>evidências</strong>.</p>
+                <a href="https://www.google.com/maps/place/Andr%C3%A9+Caz%C3%A9+Psicologia+e+Neuropsicologia/@-25.5285966,-49.2212749,11z/data=!4m8!3m7!1s0x94ce59fac62d3ac7:0x122afb91be9e9df0!8m2!3d-25.5285966!4d-49.2212749!9m1!1b1!16s%2Fg%2F11lg1r_j6m?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="btn">Ver avaliações no Google</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Serviços -->
+    <section class="services" id="servicos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Meus Serviços</h2>
+                <p>Ofereço atendimento especializado, focado em suas necessidades específicas, com base em métodos comprovados cientificamente.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🧠</div>
+                    <h3>Avaliação Neuropsicológica</h3>
+                    <p>Exame de alta complexidade que avalia funções cognitivas e comportamentais, identificando potencialidades e dificuldades através de entrevistas, testes e questionários especializados.</p>
+                    <p>Indicada para diagnóstico, acompanhamento de tratamentos e planejamento de intervenções personalizadas.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💬</div>
+                    <h3>Psicoterapia</h3>
+                    <p>Processo terapêutico baseado na Terapia Cognitivo-Comportamental (TCC), que visa promover mudanças que melhorem seu bem-estar e equilíbrio emocional.</p>
+                    <p>Trabalho questões como ansiedade, depressão, estresse, traumas, relacionamentos e autoconhecimento.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💻</div>
+                    <h3>Atendimento Online</h3>
+                    <p>Ofereço atendimento à distância com a mesma qualidade e eficácia do presencial, proporcionando flexibilidade e acessibilidade.</p>
+                    <p>Sessões realizadas por videoconferência em ambiente seguro e confidencial.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2>Dúvidas Frequentes</h2>
+                <p>Respostas para as perguntas mais comuns sobre psicoterapia e avaliação neuropsicológica.</p>
+            </div>
+            <div class="accordion">
+                <div class="accordion-item">
+                    <div class="accordion-header">Com que frequência devo fazer psicoterapia?</div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            Geralmente, as sessões ocorrem semanalmente, mas a frequência pode variar conforme as necessidades do paciente e o plano terapêutico.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">Aceita convênio médico?</div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            Não, mas emito nota fiscal para reembolso. Consulte seu convênio médico sobre a viabilidade de reembolso.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">A terapia online tem a mesma eficácia da presencial?</div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            Sim, pesquisas indicam que a psicoterapia online pode ser tão eficaz quanto a presencial, especialmente no tratamento de ansiedade, depressão e estresse. Além disso, ela proporciona mais acessibilidade e flexibilidade, permitindo que o paciente receba apoio de qualquer lugar, desde que tenha um ambiente privado e uma conexão estável com a internet.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">Como eu sei que preciso de terapia?</div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            Você pode precisar de terapia se estiver enfrentando dificuldades emocionais, problemas nos relacionamentos, mudanças desafiadoras ou quiser se conhecer melhor. A terapia ajuda a lidar com questões internas e promover bem-estar.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <div class="accordion-header">Qual é a duração de uma sessão de psicoterapia e do tratamento como um todo?</div>
+                    <div class="accordion-content">
+                        <div class="accordion-content-inner">
+                            Cada sessão tem duração de 50 minutos. O tempo total do tratamento depende dos objetivos terapêuticos e da evolução do paciente, podendo se estender por semanas, meses ou até anos.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="contact" id="contato">
+        <div class="container">
+            <div class="section-header">
+                <h2>Entre em Contato</h2>
+                <p>Estou disponível para tirar suas dúvidas e agendar seu atendimento.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Informações de Contato</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-text">Av. Presidente Affonso Camargo, 2583 | Jardim Botânico | Curitiba-PR</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div class="contact-text">(41) 99100-5480</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-text">caze.psico@gmail.com</div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🏢</div>
+                        <div class="contact-text">CNPJ: 39.449.825/0001-23 | CRP-08: PJ-03734</div>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <h3>Fale Comigo</h3>
+                    <div class="contact-buttons">
+                        <a href="https://api.whatsapp.com/send/?phone=5541991005480&text=Ol%C3%A1%2C+vim+pelo+site%21+Gostaria+de+tirar+duvidas.&type=phone_number&app_absent=0" class="btn btn-whatsapp" target="_blank">WhatsApp</a>
+                        <a href="https://www.instagram.com/neuropsicaze/#" class="btn btn-instagram" target="_blank">Instagram</a>
+                        <a href="mailto:caze.psico@gmail.com?subject=Contato%20via%20site&body=Olá,%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços" class="btn btn-email" target="_blank">E-mail</a>
+                        <a href="https://www.google.com/maps/place/Andr%C3%A9+Caz%C3%A9+Psicologia+e+Neuropsicologia/@-25.4407642,-49.2360969,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce59fac62d3ac7:0x122afb91be9e9df0!8m2!3d-25.4407642!4d-49.2360969!16s%2Fg%2F11lg1r_j6m?entry=ttu&g_ep=EgoyMDI1MDIyNC4wIKXMDSoASAFQAw%3D%3D" class="btn btn-location" target="_blank">Ver no mapa</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-logo">Debora Haupenthal | Psicologia e Neuropsicologia</div>
+            <ul class="footer-links">
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#servicos">Serviços</a></li>
+                <li><a href="#faq">Dúvidas</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/neuropsicaze/#" target="_blank" class="social-icon">📷</a>
+                <a href="https://api.whatsapp.com/send/?phone=5541991005480" target="_blank" class="social-icon">📱</a>
+            </div>
+            <div class="copyright">Copyright © 2025 Debora Haupenthal | Todos os direitos reservados</div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="./js/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="./js/modernizr-3.5.0.min.js"></script>
+    <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="./js/popper.min.js"></script>
+    <script type="text/javascript" src="./js/wow.min.js"></script>
+    <script type="text/javascript" src="./js/data.js"></script>
+    <script type="text/javascript" src="./js/app.js"></script>
+
+</body>
+</html>
