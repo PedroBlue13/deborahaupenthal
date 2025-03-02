@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta property="og:title" content="Debora Haupenthal - Psicologia e Neuropsicologia">
-    <meta property="og:description" content="Psicóloga e neuropsicólo Atendimento Online. Especialista em Terapia Cognitivo-Comportamental e Avaliações Neuropsicológicas.">
+    <meta property="og:description"
+        content="Psicóloga e neuropsicólo Atendimento Online. Especialista em Terapia Cognitivo-Comportamental e Avaliações Neuropsicológicas.">
     <meta property="og:type" content="website">
     <title>Debora Haupenthal - Neuropsicóloga pelo Hosp. Israelita Albert Einstein - SP</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
@@ -23,27 +25,27 @@
             --text: #333333;
             --shadow: rgba(0, 0, 0, 0.1);
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
         }
-        
+
         body {
             background-color: var(--light);
             color: var(--text);
             line-height: 1.6;
         }
-        
+
         .container {
             width: 100%;
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-        
+
         /* Header e navegação */
         header {
             background-color: white;
@@ -53,50 +55,50 @@
             top: 0;
             z-index: 1000;
         }
-        
+
         .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 15px 0;
         }
-        
+
         .logo {
             display: flex;
             align-items: center;
         }
-        
+
         .logo img {
             height: 50px;
             margin-right: 10px;
         }
-        
+
         .logo-text {
             font-size: 1.2rem;
             font-weight: 600;
             color: var(--primary);
         }
-        
+
         .nav-links {
             display: flex;
             list-style: none;
         }
-        
+
         .nav-links li {
             margin-left: 30px;
         }
-        
+
         .nav-links a {
             text-decoration: none;
             color: var(--light);
             font-weight: 500;
             transition: color 0.3s;
         }
-        
+
         .nav-links a:hover {
             color: var(--primary);
         }
-        
+
         .hamburger {
             display: none;
             cursor: pointer;
@@ -105,7 +107,7 @@
             font-size: 1.5rem;
             color: var(--primary);
         }
-        
+
         /* Hero Section */
         .hero {
             background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('/api/placeholder/1200/500');
@@ -114,109 +116,115 @@
             padding: 150px 0 80px;
             text-align: center;
         }
-        
+
         .hero-content {
             max-width: 800px;
             margin: 0 auto;
         }
-        
+
         .hero h1 {
             color: var(--primary);
             font-size: 2.5rem;
             margin-bottom: 20px;
             font-weight: 700;
         }
-        
+
         .hero p {
             font-size: 1.1rem;
             margin-bottom: 30px;
             color: var(--dark);
         }
-        
+
+        .full-bg3 {
+            background-color: #ebe9fd;
+            background-image: url("https://www.transparenttextures.com/patterns/large-leather.png");
+            background-size: 200px;
+        }
+
         /* Perfil */
         .profile {
             padding: 80px 0;
             background-color: white;
         }
-        
+
         .profile-container {
             display: flex;
             align-items: center;
             gap: 40px;
         }
-        
+
         .profile-image {
             flex: 1;
             text-align: center;
         }
-        
+
         .profile-image img {
             width: 90%;
             max-width: 400px;
             border-radius: 10px;
             box-shadow: 0 10px 30px var(--shadow);
         }
-        
+
         .profile-text {
             flex: 1;
         }
-        
+
         .profile-text h2 {
             color: var(--primary);
             margin-bottom: 20px;
             font-size: 2rem;
         }
-        
+
         .profile-text h3 {
             font-weight: normal;
             color: var(--secondary);
             margin-bottom: 20px;
             font-size: 1.2rem;
         }
-        
+
         .profile-text p {
             margin-bottom: 15px;
         }
-        
+
         .profile-text strong {
             color: var(--dark);
         }
-        
+
         .profile-text .btn {
             display: inline-block;
             margin-top: 20px;
         }
-        
+
         /* Serviços */
         .services {
             padding: 80px 0;
             background-color: var(--accent);
         }
-        
+
         .section-header {
             text-align: center;
             margin-bottom: 60px;
         }
-        
+
         .section-header h2 {
             color: var(--primary);
             font-size: 2rem;
             margin-bottom: 15px;
         }
-        
+
         .section-header p {
             max-width: 700px;
             margin: 0 auto;
             color: var(--dark);
         }
-        
+
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
-        
+
         .service-card {
             background-color: white;
             border-radius: 10px;
@@ -224,46 +232,46 @@
             box-shadow: 0 5px 15px var(--shadow);
             transition: transform 0.3s, box-shadow 0.3s;
         }
-        
+
         .service-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 10px 25px var(--shadow);
         }
-        
+
         .service-card h3 {
             color: var(--primary);
             margin-bottom: 15px;
             font-size: 1.4rem;
         }
-        
+
         .service-card p {
             margin-bottom: 20px;
         }
-        
+
         .service-icon {
             font-size: 2.5rem;
             color: var(--secondary);
             margin-bottom: 20px;
         }
-        
+
         /* FAQ */
         .faq {
             padding: 80px 0;
             background-color: white;
         }
-        
+
         .accordion {
             max-width: 800px;
             margin: 0 auto;
         }
-        
+
         .accordion-item {
             margin-bottom: 15px;
             border-radius: 8px;
             overflow: hidden;
             box-shadow: 0 2px 10px var(--shadow);
         }
-        
+
         .accordion-header {
             background-color: var(--light);
             padding: 15px 20px;
@@ -273,11 +281,11 @@
             color: var(--primary);
             transition: background-color 0.3s;
         }
-        
+
         .accordion-header:hover {
             background-color: var(--accent);
         }
-        
+
         .accordion-content {
             padding: 0 20px;
             max-height: 0;
@@ -285,47 +293,47 @@
             transition: max-height 0.3s ease-out;
             background-color: white;
         }
-        
+
         .accordion-content-inner {
             padding: 20px 0;
         }
-        
+
         .accordion-item.active .accordion-content {
             max-height: 200px;
         }
-        
+
         /* Contato */
         .contact {
             padding: 80px 0;
             background-color: var(--accent);
         }
-        
+
         .contact-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 30px;
             margin-top: 40px;
         }
-        
+
         .contact-info {
             background-color: white;
             border-radius: 10px;
             padding: 30px;
             box-shadow: 0 5px 15px var(--shadow);
         }
-        
+
         .contact-info h3 {
             color: var(--primary);
             margin-bottom: 20px;
             font-size: 1.4rem;
         }
-        
+
         .contact-item {
             display: flex;
             align-items: center;
             margin-bottom: 15px;
         }
-        
+
         .contact-icon {
             width: 40px;
             height: 40px;
@@ -338,18 +346,18 @@
             color: var(--primary);
             font-size: 1.2rem;
         }
-        
+
         .contact-text {
             color: var(--dark);
         }
-        
+
         .contact-buttons {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 15px;
             margin-top: 20px;
         }
-        
+
         .btn {
             display: inline-block;
             padding: 12px 25px;
@@ -363,28 +371,28 @@
             border: none;
             cursor: pointer;
         }
-        
+
         .btn:hover {
             background-color: var(--dark);
             transform: translateY(-3px);
         }
-        
+
         .btn-whatsapp {
             background-color: #25D366;
         }
-        
+
         .btn-instagram {
             background-color: #E1306C;
         }
-        
+
         .btn-email {
             background-color: var(--secondary);
         }
-        
+
         .btn-location {
             background-color: var(--dark);
         }
-        
+
         /* Footer */
         footer {
             background-color: var(--dark);
@@ -392,42 +400,42 @@
             padding: 30px 0;
             text-align: center;
         }
-        
+
         .footer-content {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
-        
+
         .footer-logo {
             margin-bottom: 20px;
         }
-        
+
         .footer-links {
             display: flex;
             list-style: none;
             margin-bottom: 20px;
         }
-        
+
         .footer-links li {
             margin: 0 15px;
         }
-        
+
         .footer-links a {
             color: white;
             text-decoration: none;
             transition: color 0.3s;
         }
-        
+
         .footer-links a:hover {
             color: var(--accent);
         }
-        
+
         .footer-social {
             display: flex;
             margin-bottom: 20px;
         }
-        
+
         .social-icon {
             width: 40px;
             height: 40px;
@@ -441,16 +449,16 @@
             font-size: 1.2rem;
             transition: background-color 0.3s;
         }
-        
+
         .social-icon:hover {
             background-color: rgba(255, 255, 255, 0.2);
         }
-        
+
         .copyright {
             font-size: 0.9rem;
             color: rgba(255, 255, 255, 0.7);
         }
-        
+
         /* Responsividade */
         @media (max-width: 768px) {
             .nav-links {
@@ -459,144 +467,145 @@
                 top: 80px;
                 left: 0;
                 width: 100%;
-                background-color: white;
+                background-color: var(--dark);
                 flex-direction: column;
                 padding: 20px;
                 box-shadow: 0 5px 15px var(--shadow);
+                text-align: center;
             }
-            
+
             .nav-links.active {
                 display: flex;
             }
-            
+
             .nav-links li {
                 margin: 10px 0;
             }
-            
+
             .hamburger {
                 display: block;
             }
-            
+
             .profile-container {
                 flex-direction: column;
             }
-            
-            .profile-image, .profile-text {
+
+            .profile-image,
+            .profile-text {
                 width: 100%;
             }
-            
+
             .contact-buttons {
                 grid-template-columns: 1fr;
             }
         }
 
         .testimonials {
-    padding: 80px 0;
-    background-color: white;
-}
+            padding: 80px 0;
+            background-color: white;
+        }
 
-.testimonials-slider {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin-top: 40px;
-}
+        .testimonials-slider {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
 
-.testimonial-card {
-    background-color: var(--light);
-    border-radius: 10px;
-    padding: 30px;
-    box-shadow: 0 5px 15px var(--shadow);
-    transition: transform 0.3s, box-shadow 0.3s;
-    display: flex;
-    flex-direction: column;
-}
+        .testimonial-card {
+            background-color: var(--light);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px var(--shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
 
-.testimonial-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px var(--shadow);
-}
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px var(--shadow);
+        }
 
-.testimonial-content {
-    flex-grow: 1;
-    margin-bottom: 20px;
-}
+        .testimonial-content {
+            flex-grow: 1;
+            margin-bottom: 20px;
+        }
 
-.testimonial-content p {
-    font-style: italic;
-    color: var(--text);
-    line-height: 1.7;
-    position: relative;
-}
+        .testimonial-content p {
+            font-style: italic;
+            color: var(--text);
+            line-height: 1.7;
+            position: relative;
+        }
 
-.testimonial-content p::before {
-    content: '"';
-    font-size: 3rem;
-    color: var(--accent);
-    position: absolute;
-    top: -20px;
-    left: -15px;
-    opacity: 0.5;
-}
+        .testimonial-content p::before {
+            content: '"';
+            font-size: 3rem;
+            color: var(--accent);
+            position: absolute;
+            top: -20px;
+            left: -15px;
+            opacity: 0.5;
+        }
 
-.testimonial-author {
-    display: flex;
-    align-items: center;
-}
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
 
-.author-image {
-    width: a0px;
-    height: a0px;
-    border-radius: 50%;
-    margin-right: 15px;
-    overflow: hidden;
-}
+        .author-image {
+            width: a0px;
+            height: a0px;
+            border-radius: 50%;
+            margin-right: 15px;
+            overflow: hidden;
+        }
 
-.author-placeholder {
-    width: 50px;
-    height: 50px;
-    background-color: var(--primary);
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    font-size: 1.2rem;
-}
+        .author-placeholder {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
 
-.author-info h4 {
-    margin: 0;
-    color: var(--primary);
-    font-size: 1.1rem;
-}
+        .author-info h4 {
+            margin: 0;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
 
-.author-info p {
-    margin: 5px 0;
-    font-size: 0.9rem;
-    color: var(--dark);
-    opacity: 0.8;
-}
+        .author-info p {
+            margin: 5px 0;
+            font-size: 0.9rem;
+            color: var(--dark);
+            opacity: 0.8;
+        }
 
-.rating {
-    color: #FFD700;
-    letter-spacing: 2px;
-}
+        .rating {
+            color: #FFD700;
+            letter-spacing: 2px;
+        }
 
-.testimonial-footer {
-    text-align: center;
-    margin-top: 40px;
-}
+        .testimonial-footer {
+            text-align: center;
+            margin-top: 40px;
+        }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    .testimonials-slider {
-        grid-template-columns: 1fr;
-    }
-}
-
-
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .testimonials-slider {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
+
 <body>
     <!-- Header e Navegação -->
     <header style="background-color: var(--dark);">
@@ -606,8 +615,8 @@
                 <div class="logo-text">Debora Haupenthal | Psicologia</div>
             </div>
             <button class="hamburger">☰</button>
-            <ul class="nav-links" >
-                <li ><a href="#sobre">Sobre mim</a></li>
+            <ul class="nav-links">
+                <li><a href="#sobre">Sobre mim</a></li>
                 <li><a href="#servicos">Serviços</a></li>
                 <li><a href="#depoimentos">Depoimentos</a></li>
                 <li><a href="#faq">Dúvidas</a></li>
@@ -617,11 +626,13 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero full-bg3">
         <div class="container hero-content">
             <h1 class=" animate__animated animate__fadeIn wow">Psicologia e Neuropsicologia baseadas em evidências</h1>
-            <p class="animate__animated animate__fadeIn animate__delay-1s wow">Transforme sua saúde mental com atendimento humanizado e profissional, presencial ou online.</p>
-            <a href="#contato" class="btn animate__animated animate__fadeIn animate__delay-1s wow">Agende sua consulta</a>
+            <p class="animate__animated animate__fadeIn animate__delay-1s wow">Transforme sua saúde mental com
+                atendimento humanizado e profissional, presencial ou online.</p>
+            <a href="#contato" class="btn animate__animated animate__fadeIn animate__delay-1s wow">Agende sua
+                consulta</a>
         </div>
     </section>
 
@@ -634,10 +645,20 @@
             <div class="profile-text">
                 <h2 class="animate__animated animate__fadeInRight">Debora Haupenthal</h2>
                 <h3>Psicóloga e Neuropsicóloga (CRP-PR: 07/06890)</h3>
-                <p class="animate__animated animate__fadeInRight animate__delay-1s"><strong>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit. Phasellus nec iaculis mauris. <strong>Curabitur nec risus at odio luctus suscipit.</strong> Vestibulum tincidunt lacus nec felis tempus, at pharetra turpis pellentesque. Duis gravida nunc vel ipsum facilisis, nec tincidunt est tincidunt.</p>
-                <p class="animate__animated animate__fadeInRight animate__delay-2s"><strong>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit. Fusce vel nibh et quam venenatis pretium a nec libero. Sed eget risus bibendum, <strong>volutpat lacus id, laoreet tortor</strong>. Etiam auctor sem a nulla ullamcorper fringilla.</p>
-                <p class="animate__animated animate__fadeInRight animate__delay-3s"><strong>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit. Integer auctor ex ac odio tincidunt, a tristique felis malesuada. Nulla <strong>facilisi. Proin consectetur purus</strong>  in lectus egestas, nec dictum nisi pellentesque.</p>
-                <a href="" target="_blank" class="btn animate__animated animate__flipInX animate__delay-3s">Ver avaliações no Google</a>
+                <p class="animate__animated animate__fadeInRight animate__delay-1s"><strong>Lorem ipsum dolor sit
+                        amet</strong>, consectetur adipiscing elit. Phasellus nec iaculis mauris. <strong>Curabitur nec
+                        risus at odio luctus suscipit.</strong> Vestibulum tincidunt lacus nec felis tempus, at pharetra
+                    turpis pellentesque. Duis gravida nunc vel ipsum facilisis, nec tincidunt est tincidunt.</p>
+                <p class="animate__animated animate__fadeInRight animate__delay-2s"><strong>Lorem ipsum dolor sit
+                        amet</strong>, consectetur adipiscing elit. Fusce vel nibh et quam venenatis pretium a nec
+                    libero. Sed eget risus bibendum, <strong>volutpat lacus id, laoreet tortor</strong>. Etiam auctor
+                    sem a nulla ullamcorper fringilla.</p>
+                <p class="animate__animated animate__fadeInRight animate__delay-3s"><strong>Lorem ipsum dolor sit
+                        amet</strong>, consectetur adipiscing elit. Integer auctor ex ac odio tincidunt, a tristique
+                    felis malesuada. Nulla <strong>facilisi. Proin consectetur purus</strong> in lectus egestas, nec
+                    dictum nisi pellentesque.</p>
+                <a href="" target="_blank" class="btn animate__animated animate__flipInX animate__delay-3s">Ver
+                    avaliações no Google</a>
             </div>
         </div>
     </section>
@@ -647,26 +668,34 @@
         <div class="container">
             <div class="section-header">
                 <h2>Meus Serviços</h2>
-                <p>Ofereço atendimento especializado, focado em suas necessidades específicas, com base em métodos comprovados cientificamente.</p>
+                <p>Ofereço atendimento especializado, focado em suas necessidades específicas, com base em métodos
+                    comprovados cientificamente.</p>
             </div>
             <div class="services-grid">
                 <div class="service-card animate__animated animate__fadeInLeft  wow">
                     <div class="service-icon">🧠</div>
                     <h3>Avaliação Neuropsicológica</h3>
-                    <p>Exame de alta complexidade que avalia funções cognitivas e comportamentais, identificando potencialidades e dificuldades através de entrevistas, testes e questionários especializados.</p>
-                    <p>Indicada para diagnóstico, acompanhamento de tratamentos e planejamento de intervenções personalizadas.</p>
+                    <p>Exame de alta complexidade que avalia funções cognitivas e comportamentais, identificando
+                        potencialidades e dificuldades através de entrevistas, testes e questionários especializados.
+                    </p>
+                    <p>Indicada para diagnóstico, acompanhamento de tratamentos e planejamento de intervenções
+                        personalizadas.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon">💬</div>
                     <h3>Psicoterapia</h3>
-                    <p>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit. Integer auctor ex ac odio tincidunt, a tristique felis.</p>
-                    <p>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit. Integer auctor ex ac odio tincidunt, a tristique felis.</p>
+                    <p>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit. Integer auctor ex ac odio
+                        tincidunt, a tristique felis.</p>
+                    <p>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit. Integer auctor ex ac odio
+                        tincidunt, a tristique felis.</p>
                 </div>
                 <div class="service-card animate__animated animate__fadeInRight  wow">
                     <div class="service-icon">💻</div>
                     <h3>Atendimento Online</h3>
-                    <p>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit. Integer auctor ex ac odio tincidunt, a tristique felis.</p>
-                    <p>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit. Integer auctor ex ac odio tincidunt, a tristique felis.</p>
+                    <p>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit. Integer auctor ex ac odio
+                        tincidunt, a tristique felis.</p>
+                    <p>Lorem ipsum dolor sit amet</strong>, consectetur adipiscing elit. Integer auctor ex ac odio
+                        tincidunt, a tristique felis.</p>
                 </div>
             </div>
         </div>
@@ -681,7 +710,10 @@
             <div class="testimonials-slider">
                 <div class="testimonial-card animate__animated animate__flipInX wow">
                     <div class="testimonial-content">
-                        <p>"A terapia com a Dra. Debora foi um divisor de águas na minha vida. Depois de meses lidando com ansiedade e dificuldades no trabalho, finalmente consegui desenvolver estratégias eficazes para lidar com meus pensamentos. Sua abordagem é acolhedora e profissional ao mesmo tempo."</p>
+                        <p>"A terapia com a Dra. Debora foi um divisor de águas na minha vida. Depois de meses lidando
+                            com ansiedade e dificuldades no trabalho, finalmente consegui desenvolver estratégias
+                            eficazes para lidar com meus pensamentos. Sua abordagem é acolhedora e profissional ao mesmo
+                            tempo."</p>
                     </div>
                     <div class="testimonial-author">
                         <div class="author-image">
@@ -694,10 +726,13 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="testimonial-card animate__animated animate__flipInX  wow">
                     <div class="testimonial-content">
-                        <p>"A avaliação neuropsicológica realizada pela Dra. Debora foi extremamente detalhada e esclarecedora. Finalmente entendi as dificuldades do meu filho e pudemos buscar os recursos adequados para auxiliá-lo na escola. O relatório foi muito bem aceito pela instituição de ensino e pelos outros profissionais."</p>
+                        <p>"A avaliação neuropsicológica realizada pela Dra. Debora foi extremamente detalhada e
+                            esclarecedora. Finalmente entendi as dificuldades do meu filho e pudemos buscar os recursos
+                            adequados para auxiliá-lo na escola. O relatório foi muito bem aceito pela instituição de
+                            ensino e pelos outros profissionais."</p>
                     </div>
                     <div class="testimonial-author">
                         <div class="author-image">
@@ -710,10 +745,13 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="testimonial-card animate__animated animate__flipInX wow">
                     <div class="testimonial-content">
-                        <p>"Mesmo com o atendimento online, consegui estabelecer uma conexão muito boa com a Dra. Debora. Sua capacidade de escuta e suas intervenções são sempre muito pertinentes. Após seis meses de terapia, sinto uma melhora significativa nos meus relacionamentos interpessoais e na minha autoconfiança."</p>
+                        <p>"Mesmo com o atendimento online, consegui estabelecer uma conexão muito boa com a Dra.
+                            Debora. Sua capacidade de escuta e suas intervenções são sempre muito pertinentes. Após seis
+                            meses de terapia, sinto uma melhora significativa nos meus relacionamentos interpessoais e
+                            na minha autoconfiança."</p>
                     </div>
                     <div class="testimonial-author">
                         <div class="author-image">
@@ -745,7 +783,8 @@
                     <div class="accordion-header">Com que frequência devo fazer psicoterapia?</div>
                     <div class="accordion-content">
                         <div class="accordion-content-inner">
-                            Geralmente, as sessões ocorrem semanalmente, mas a frequência pode variar conforme as necessidades do paciente e o plano terapêutico.
+                            Geralmente, as sessões ocorrem semanalmente, mas a frequência pode variar conforme as
+                            necessidades do paciente e o plano terapêutico.
                         </div>
                     </div>
                 </div>
@@ -753,7 +792,8 @@
                     <div class="accordion-header">Aceita convênio médico?</div>
                     <div class="accordion-content">
                         <div class="accordion-content-inner">
-                            Não, mas emito nota fiscal para reembolso. Consulte seu convênio médico sobre a viabilidade de reembolso.
+                            Não, mas emito nota fiscal para reembolso. Consulte seu convênio médico sobre a viabilidade
+                            de reembolso.
                         </div>
                     </div>
                 </div>
@@ -761,7 +801,10 @@
                     <div class="accordion-header">A terapia online tem a mesma eficácia da presencial?</div>
                     <div class="accordion-content">
                         <div class="accordion-content-inner">
-                            Sim, pesquisas indicam que a psicoterapia online pode ser tão eficaz quanto a presencial, especialmente no tratamento de ansiedade, depressão e estresse. Além disso, ela proporciona mais acessibilidade e flexibilidade, permitindo que o paciente receba apoio de qualquer lugar, desde que tenha um ambiente privado e uma conexão estável com a internet.
+                            Sim, pesquisas indicam que a psicoterapia online pode ser tão eficaz quanto a presencial,
+                            especialmente no tratamento de ansiedade, depressão e estresse. Além disso, ela proporciona
+                            mais acessibilidade e flexibilidade, permitindo que o paciente receba apoio de qualquer
+                            lugar, desde que tenha um ambiente privado e uma conexão estável com a internet.
                         </div>
                     </div>
                 </div>
@@ -769,15 +812,19 @@
                     <div class="accordion-header">Como eu sei que preciso de terapia?</div>
                     <div class="accordion-content">
                         <div class="accordion-content-inner">
-                            Você pode precisar de terapia se estiver enfrentando dificuldades emocionais, problemas nos relacionamentos, mudanças desafiadoras ou quiser se conhecer melhor. A terapia ajuda a lidar com questões internas e promover bem-estar.
+                            Você pode precisar de terapia se estiver enfrentando dificuldades emocionais, problemas nos
+                            relacionamentos, mudanças desafiadoras ou quiser se conhecer melhor. A terapia ajuda a lidar
+                            com questões internas e promover bem-estar.
                         </div>
                     </div>
                 </div>
                 <div class="accordion-item">
-                    <div class="accordion-header">Qual é a duração de uma sessão de psicoterapia e do tratamento como um todo?</div>
+                    <div class="accordion-header">Qual é a duração de uma sessão de psicoterapia e do tratamento como um
+                        todo?</div>
                     <div class="accordion-content">
                         <div class="accordion-content-inner">
-                            Cada sessão tem duração de 50 minutos. O tempo total do tratamento depende dos objetivos terapêuticos e da evolução do paciente, podendo se estender por semanas, meses ou até anos.
+                            Cada sessão tem duração de 50 minutos. O tempo total do tratamento depende dos objetivos
+                            terapêuticos e da evolução do paciente, podendo se estender por semanas, meses ou até anos.
                         </div>
                     </div>
                 </div>
@@ -797,9 +844,9 @@
                     <h3>Informações de Contato</h3>
                     <div class="contact-item">
                         <div class="contact-icon">📍</div>
-                        <div class="contact-text">Av. 
-                            Lorem ipsum dolor sit amet, 2583 | 
-                            Lorem ipsum dolor sit amet | 
+                        <div class="contact-text">Av.
+                            Lorem ipsum dolor sit amet, 2583 |
+                            Lorem ipsum dolor sit amet |
                             Lorem ipsum dolor sit amet-BR</div>
                     </div>
                     <div class="contact-item">
@@ -812,7 +859,8 @@
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">🏢</div>
-                        <div class="contact-text">CNPJ: Lorem ipsum dolor sit amet | CRP-Lorem ipsum dolor sit amet: PJ-Lorem ipsum dolor sit amet</div>
+                        <div class="contact-text">CNPJ: Lorem ipsum dolor sit amet | CRP-Lorem ipsum dolor sit amet:
+                            PJ-Lorem ipsum dolor sit amet</div>
                     </div>
                 </div>
                 <div class="contact-info">
@@ -852,4 +900,5 @@
     <script type="text/javascript" src="./js/app.js" defer></script>
 
 </body>
+
 </html>
